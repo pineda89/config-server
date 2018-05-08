@@ -1,0 +1,25 @@
+info:
+  component: Config Server
+spring:
+  application:
+    name: configserver
+  autoconfigure.exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jmx:
+    default_domain: cloud.config.server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pineda89/my-config.git
+          cloneOnStart: true
+          # username: your_user
+          # password: your_password
+
+
+server:
+  port: 8888
+management:
+  context_path: /admin
+
+
+
