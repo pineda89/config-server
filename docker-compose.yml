@@ -1,7 +1,7 @@
 version: '3'
 services:
   configserver:
-    build: .
+    image: pineda89/config-server
     ports:
      - "8888:8888"
     environment:
