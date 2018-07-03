@@ -14,6 +14,8 @@ spring:
           cloneOnStart: true
           # username: your_user
           # password: your_password
+          searchPaths: '{profile}/'
+
 
 
 server:

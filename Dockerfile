@@ -6,6 +6,8 @@ COPY . /opt/config-server/
 
 WORKDIR /opt/config-server/
 
+RUN apk add --no-cache haveged
+
 RUN mvn package
 
 WORKDIR /
