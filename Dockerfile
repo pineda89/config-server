@@ -10,7 +10,7 @@ RUN mvn package
 
 WORKDIR /
 
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",\
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xmx4096m", "-jar",\
             "/opt/config-server/target/config-server-1.0-SNAPSHOT.jar",\
             "--server.port=8888",\
             "--spring.config.name=application"]
