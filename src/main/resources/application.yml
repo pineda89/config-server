@@ -12,16 +12,20 @@ spring:
         git:
           uri: https://github.com/pineda89/my-config.git
           cloneOnStart: true
+          default-label: master
           # username: your_user
           # password: your_password
-          searchPaths: '{profile}/'
+          searchPaths: '{application}/{profile}'
+          # searchPaths: '{profile}/'
 
-
+          # just an example:
+          # with :   searchPaths: '{application}/{profile}'
+          # we can call server as: http://HOST:PORT/BRANCH/APPLICATION-ENV.yml
+          #                        http://localhost:8888/master/api-clients-prod.yml
+          # in this example, the expected config file is on branch 'master', and structure    api-clients/prod/api-clients.yml
 
 server:
   port: 8888
 management:
   context_path: /admin
-
-
 
